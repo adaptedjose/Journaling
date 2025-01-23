@@ -1,0 +1,128 @@
+<!-- Rooms index -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRC: Habitaciones</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="w-full bg-[#DAB49D] bg-opacity-90 fixed top-0 z-50">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between h-auto sm:h-[75px] p-4 sm:space-x-4">
+            <!-- Previous title/logo -->
+            <!-- Choose logo or title  -->
+            <!-- <h1 class="font-anybody font-bold text-xl sm:text-2xl text-purple-700 selection:bg -[#998FC7] flex flex-col items-center mb-4 sm:mb-0">
+                <span class="block leading-none">Hotel</span>
+                <span class="text-black text-opacity-80">El Rincón de Camila</span>
+            </h1> -->
+            <img class="w-18 h-16 rounded-full" src="./image_library/hotel_Logo.svg" alt="logoHotel">
+            <!-- Navigation buttons  -->
+            <div class="flex flex-wrap sm:space-x-4 space-y-2 sm:space-y-0">
+                <a href="./index.html" class="font-anybody font-medium text-sm text-black bg-[#F3E9DC] hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 rounded-lg px-4 py-2 transition duration-300 shadow-sm">
+                    Inicio
+                </a>
+                <a href="./index_2.html" class="font-anybody font-medium text-sm text-black bg-[#F3E9DC] hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 rounded-lg px-4 py-2 transition duration-300 shadow-sm">
+                    Habitaciones
+                </a>
+                <a href="#contacto" class="font-anybody font-medium text-sm text-black bg-[#F3E9DC] hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 rounded-lg px-4 py-2 transition duration-300 shadow-sm">
+                    Contacto
+                </a>
+                <!-- <a href="javascript:void(0);" onclick="openModal()" class="font-anybody font-medium text-sm text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 rounded-lg px-4 py-2 transition duration-300 shadow-md">
+                    Iniciar Sesión
+                </a> -->
+                <a href="javascript:void(0);" onclick="handleReservationClick()" class="font-anybody font-medium text-sm text-white bg-[#C08552] hover:ring-gray-300 focus:ring-4 focus:ring-brown-700 rounded-lg px-4 py-2 transition duration-300 shadow-md">
+                  Reservas
+                </a>
+            </div>
+        </div>
+    </nav>   
+    <!-- Welcoming section -->
+    <div class="container w-screen h-[450px] bg-white-700 p-4 sm:p-8 mt-[75px]">
+        <div id="roomsDisplay" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+    <!-- Footer -->
+    <footer class="h-[100px] w-full bg-gray-200 sm:h-[100px] flex flex-col sm:flex-row justify-between items-center sm:items-start p-2">
+        <!-- Hotel title  -->
+        <h1 class="font-anybody font-bold text-lg sm:text-xl lg:text-2xl text-purple-700 selection:bg-[#998FC7] flex flex-col sm:flex-row items-center sm:items-start mb-0 w-full text-center sm:text-left">
+            <span class="block leading-tight">Hotel</span>
+            <span class="text-black text-opacity-80">El Rincón de Camila</span>
+        </h1>
+        <!-- Social media -->
+        <div class="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-2 sm:gap-4 w-full">
+            <!-- Contact information -->
+            <div class="text-gray-800 flex-1 text-xs sm:text-sm">
+                <p>Teléfono: +57 (301) 500-4908</p>
+                <p>Email: hotelrincondecamila@bucaramanga.com</p>
+                <p>Dirección: Calle 35 #12-27</p>
+            </div>
+            <!-- Social media logos -->
+            <div class="flex gap-2 sm:gap-4">
+                <a href="#" class="text-blue-500 hover:text-blue-700">
+                    <img src="./image_library/facebook_icon.svg" alt="Facebook" class="h-5 w-5"/>
+                </a>
+                <a href="#" class="text-blue-400 hover:text-blue-600">
+                    <img src="./image_library/x_icon.svg" alt="X" class="h-5 w-5"/>
+                </a>
+                <a href="#" class="text-pink-500 hover:text-pink-700">
+                    <img src="./image_library/instagram_icon.svg" alt="Instagram" class="h-5 w-5"/>
+                </a>
+            </div>
+        </div>
+        <!-- Privacy politics -->
+        <div class="mt-2 border-t border-gray-300 pt-2 text-gray-600 w-full flex justify-center sm:justify-start">
+            <p class="text-xs sm:text-sm text-center sm:text-left">
+                © 2025 Ejemplo. Todos los derechos reservados. 
+                <a href="https://www.youtube.com/watch?v=QB7ACr7pUuE&ab_channel=Rickroll%2Cbutwithadifferentlink" class="text-blue-500 hover:underline">Políticas de Privacidad</a> | 
+                <a href="https://www.youtube.com/watch?v=QB7ACr7pUuE&ab_channel=Rickroll%2Cbutwithadifferentlink" class="text-blue-500 hover:underline">Términos y Condiciones</a>
+            </p>
+        </div>
+    </footer>
+    <!-- WhatsApp Sticky Button -->
+    <a  
+    href="https://web.whatsapp.com/"
+    class="fixed bottom-4 left-4 flex items-center justify-center space-x-2"
+    target="_blank">
+        <div class="flex items-center space-x-2">
+            <img src="./image_library/whatsapp_icon.svg" alt="WhatsApp" class="w-10 h-10" />
+            <div class="flex items-center bg-[#F9F5FF] p-2 rounded-lg shadow-lg">
+                <span class="text-sm text-black">¡Contáctanos!</span>
+            </div>
+        </div>
+    </a>
+    <!-- 'Iniciar Sesión' modal -->
+    <div id="modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50">
+        <div class="modal-content bg-white rounded-lg p-6 mx-auto mt-24 w-96">
+          <!-- Modal Header -->
+          <div class="flex justify-between items-center mb-4">
+            <h2 id="modal-title" class="text-lg font-semibold">Iniciar sesión</h2>
+            <button onclick="closeModal()" class="text-red-500">&times;</button>
+          </div>
+      
+          <!-- Modal Body -->
+          <div id="modal-body">
+            <!-- Login Form -->
+            <div id="login-form">
+              <input type="text" id="username" placeholder="Usuario" class="border p-2 mb-3 w-full">
+              <input type="password" id="password" placeholder="Contraseña" class="border p-2 mb-3 w-full">
+              <button onclick="login()" class="w-full bg-purple-600 text-white py-2 rounded-lg">Iniciar sesión</button>
+              <p class="mt-2 text-sm text-center">¿No tienes cuenta? <a href="javascript:void(0);" onclick="switchToRegister()" class="text-purple-600">Regístrate aquí</a></p>
+            </div>
+      
+            <!-- Register Form -->
+            <div id="register-form" class="hidden">
+              <input type="text" id="new-username" placeholder="Nuevo usuario" class="border p-2 mb-3 w-full">
+              <input type="email" id="new-email" placeholder="Correo electrónico" class="border p-2 mb-3 w-full">
+              <input type="password" id="new-password" placeholder="Contraseña" class="border p-2 mb-3 w-full">
+              <button onclick="register()" class="w-full bg-purple-600 text-white py-2 rounded-lg">Registrarse</button>
+              <p class="mt-2 text-sm text-center">¿Ya tienes cuenta? <a href="javascript:void(0);" onclick="switchToLogin()" class="text-purple-600">Inicia sesión aquí</a></p>
+            </div>
+          </div>
+        </div>
+    </div>      
+    <script src="./script.js"></script>   
+</body>
+</html>

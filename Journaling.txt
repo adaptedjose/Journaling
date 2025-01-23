@@ -1,0 +1,34 @@
+Comandos Git Linux:
+git init
+git add .
+git commit -m "Primer commit"
+git status
+git push origin main (Primera vez)
+git push
+git remote add origin "link.repositorio" (Para agregar el link del repositorio remoto)
+git remote -v (Para ver el link del repositorio remoto)
+git remote remove origin (Para eliminar el link del repositorio remoto "Origin")
+git checkout -b main (Para comprobar que está en el branch main)
+git clone "link.repositorio"
+git config  --global user.name
+git config --global user.email 
+git config --global --list (Ver todo el Gitconfig)
+git config --global --unset user.name (Quitar nombre)
+git config --global --unset user.email (Quitar correo)
+
+
+Comandos consola de Linux:
+Ctrl+Alt+T - Abrir consola de Linux
+-cd .. - Devolverse atrás en el directorio
+-C: "ruta/del/disco/duro" - Para cambiar de disco duro
+-ls - Directorio actual 
+-mkdir - Crear un nuevo directorio
+-rmdir - Eliminar un directorio vacío
+-rm - Eliminar un archivo
+-cp - Copiar archivos de un lugar a otro
+-mv - Mover archivos de un lugar a otro
+-clear - Limpiar la consola
+-exit - Cerrar la consola
+-echo - Muestra un mensaje en la pantalla
+
+npx json-server@0.17.4 db.json
