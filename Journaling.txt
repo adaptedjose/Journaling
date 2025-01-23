@@ -47,3 +47,102 @@ CMD Linux:
 Configuración de perfil Git:
 -git config --global user.name "Juan Pérez"
 -git config --global user.email 
+
+Instrucciones Git
+-Crear repositorio
+-Comandos para subirlo:
+Después de subirlo para hacerle cambios
+git init
+git add . (Agregar todos los nuevos archivos)
+git status
+git commit -m "Nombre del commit"
+git push
+git push origin main
+
+GitHub:
+1. git init (En la carpeta deseada)
+2. git add .
+   git add "archivo" usar 'tab'
+3. git status (Verificar los archivos preparados para subir)
+4. git commit -m "Nombre commit"
+5. IR A GITHUB, CREAR EL REPOSITORIO
+	-Agregar descripción
+	-Público o privado
+	-Con o sin README 
+6. git remote add origin "link repositorio"
+7. git push -u origin main #Para 'pushear' el cambio
+
+Otros comandos de GitHub:
+1. git checkout -b main # Para comprobar que se esté en el branch main
+2. git clone "link repositorio" #Para clonar un repositorio
+3. git pull
+
+Configuración y uso de Git:
+CMD Windows:
+-git --version - Para ver la versión instalada de Git
+Configuración de perfil Git:
+-git config --global user.name "Juan Pérez"
+-git config --global user.email "juanperez@example.com"
+-git config --global --list (Comprobar que las credenciales que están guardadas son correctas)
+-git config --global core.editor "code --wait"
+-git config --list (Ver el archivo de configuración de Git)
+-git config --global core.editor "notepad" ( Elegir un editor personalizado para el Gitconfig )
+git config --global --unset user.name
+git config --global --unset user.email ( Quitar configuraciones específicas )
+
+ 
+CMD Linux:
+-python --version
+-python3 --version
+-nano ~/.gitconfig - Para ver el gitconfig desde Nano (Visor de archivos)
+-rm  ~/.gitconfig
+"juanperez@example.com"
+Configuración de perfil Git:
+-git config --global user.name "Juan Pérez"
+-git config --global user.email 
+
+En la carpeta deseada para el repositorio:
+1. Abrir Git Bash aquí
+LS LISTAR DIRECTORIO DIFERENTE
+mkdir dir-clase
+cd dir-clase ()
+git init 
+vim archivo.txt ( o Nano )
+git add archivo.txt
+git add . ( Para agregar todos los cambios posibles al commit )
+git commit -m "Cambio 1"
+git push -u origin main
+git push 
+git remote add origin https://github.com/adaptedjose/Git.git
+git push --set-upstream origin master
+
+COMANDOS DE GIT :
+git branch -a ( Para ver la rama actual  )
+git branch desarrollo ( Para crear una rama nueva )
+git checkout "desarrollo"( Para cambiar a otra rama )
+git checkout -b "Nombre de la rama"
+git log --oneline ( Para ver el registro de cambios )
+git branch -d desarrollo ( Para borrar una rama, no se puede borrar rama si es la actual )
+git log --graph --all --decorate ( Para exponer los cambios de manera organizada	 )
+
+Manejo de VIM:
+i - Entrar en modo inserción
+Esc - Salir de modo inserción
+:w - Guardar
+:q - Salir
+
+
+git restore "archivo"
+cat "Nombre de archivo" ( Para ver el interior del archivo )
+git revert "Commit-hash"
+
+Comandos Vim Nano
+
+Bifurcación de ramas:
+-"Fork" desde GitHub
+
+git branch colaborador
+git checkout colaborador
+gir branch
+git commit -a
+git remote -v 
