@@ -32,3 +32,18 @@ Ctrl+Alt+T - Abrir consola de Linux
 -echo - Muestra un mensaje en la pantalla
 
 npx json-server@0.17.4 db.json
+
+Otros comandos de GitHub:
+1. git checkout -b main # Para comprobar que se esté en el branch main
+2. git clone "link repositorio" #Para clonar un repositorio
+3. git pull
+
+CMD Linux:
+-python --version
+-python3 --version
+-nano ~/.gitconfig - Para ver el gitconfig desde Nano (Visor de archivos)
+-rm  ~/.gitconfig
+"juanperez@example.com"
+Configuración de perfil Git:
+-git config --global user.name "Juan Pérez"
+-git config --global user.email 
